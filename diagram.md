@@ -1,32 +1,31 @@
-```mermaid
 graph TD
-    A[User (Web Browser)] --> B(Login/Register);
-    B --> C{Authentication?};
-    C -- Yes --> D[Main Page (Home.html)];
-    C -- No --> B;
-    D --> E[Prediction Page (prediction.html)];
-    D --> F[History Page (history.html)];
-    D --> G[Logout];
-    E --> H[Image Upload & Model Select];
-    H --> I[Django View (predict)];
-    I --> J[Image Preprocessing];
-    J --> K[Load Model (TensorFlow/Keras)];
-    K --> L[Model Prediction];
-    L --> M[LIME Explanation];
-    M --> N[Store Prediction & LIME];
-    N --> O[Render Results];
-    F --> P[Django View (HistoryView)];
-    P --> Q[Query History];
-    Q --> R[Filter/Search/Paginate];
-    R --> S[Render History];
-    G --> T[Django View (Logout)];
-    T --> B;
-    I --> X[Error Handling];
-    X --> O;
-    P --> Y[Error Handling];
-    Y --> S;
-    H --> Z[Error Handling];
-    Z --> E;
-    N --> AA[Media Storage];
-    AA --> O;
-    M --> AA;
+    A[User Web Browser] --> B(Login/Register)
+    B --> C{Authentication?}
+    C -- Yes --> D[Main Page Home.html]
+    C -- No --> B
+    D --> E[Prediction Page prediction.html]
+    D --> F[History Page history.html]
+    D --> G[Logout]
+    E --> H[Image Upload & Model Select]
+    H --> I[Django View predict]
+    I --> J[Image Preprocessing]
+    J --> K[Load Model TensorFlow/Keras]
+    K --> L[Model Prediction]
+    L --> M[LIME Explanation]
+    M --> N[Store Prediction & LIME]
+    N --> O[Render Results]
+    F --> P[Django View HistoryView]
+    P --> Q[Query History]
+    Q --> R[Filter/Search/Paginate]
+    R --> S[Render History]
+    G --> T[Django View Logout]
+    T --> B
+    I --> X[Error Handling]
+    X --> O
+    P --> Y[Error Handling]
+    Y --> S
+    H --> Z[Error Handling]
+    Z --> E
+    N --> AA[Media Storage]
+    AA --> O
+    M --> AA
